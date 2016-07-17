@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang=en>
+
+<head>
+  <!-- metadata -->
+  <title>Solid Aquafortis Group-1 App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- mobile-angular-ui's needed files -->
+  <!-- CSS's -->
+  <link rel="stylesheet"
+  href="bower_components/mobile-angular-ui/dist/css/mobile-angular-ui-base.min.css"
+  />
+  <link rel="stylesheet"
+  href="bower_components/mobile-angular-ui/dist/css/mobile-angular-ui-hover.min.css"
+  />
+  <link rel="stylesheet"
+  href="bower_components/mobile-angular-ui/dist/css/mobile-angular-ui-desktop.min.css"
+  />
+  <!-- JS's -->
+  <script
+    src="bower_components/angular/angular.min.js"></script>
+  <script
+    src="bower_components/angular-route/angular-route.min.js"></script>
+  <script
+    src="bower_components/mobile-angular-ui/dist/js/mobile-angular-ui.min.js"></script>
+
+  <!-- Application JS -->
+  <script src="index.js"></script>
+
+</head>
+
+<body ng-app="sag1Application" ng-controller="MainController">
+
+  <!-- Initialize sidebar, left and right, with templated html -->
+  <div ng-include="'sidebar.html'" ui-track-as-search-param="true"
+    class="sidebar sidebar-left"></div>
+  <!-- <div ng-include="'sidebar.html'" ui-track-as-search-param="true"
+    class="sidebar sidebar-right"></div> -->
+
+  <div class="app">
+
+    <!-- Navbars -->
+    <div class="navbar navbar-app navbar-absolute-top">
+
+      <div class="navbar-brand navbar-brand-center" ui-yield-to="title">
+        Solid Aquafortis Group-1 App
+      </div>
+
+      <!-- Sidebars -->
+      <div class="btn-group pull-left">
+        <div ui-toggle="uiSidebarLeft" class="btn sidebar-toggle">
+          <i class="fa fa-bars"></i>Menu
+        </div>
+      </div>
+
+      <div class="btn-group pull-right">
+        <div ui-toggle="uiSidebarRight" class="btn">
+          <i class="fa fa-comment"></i>Chat
+        </div>
+      </div>
+
+    </div>
+
+    <div class="navbar navbar-app navbar-absolute-bottom"
+      ui-yield-to="navbar-bottom"></div>
+
+    <!-- body -->
+    <div class="app-body" ng-class="{loading:loading}">
+      <div ng-show="loading" class="app-content-spinner">
+        <i class="fa fa-spinner fa-spin loading-spinner"></i>
+      </div>
+      <div class="app-content">
+        <ng-view></ng-view>
+      </div>
+    </div>
+  </div>
+
+  <div ui-yield-to="modals"></div>
+
+</body>
+
+</html>
