@@ -1,0 +1,61 @@
+<!-- navbar title change -->
+<div ui-content-for="title">
+  <span>Training</span>
+</div>
+
+<!-- navbar buttons -->
+<div ui-content-for="navbar-bottom">
+  <div class="btn-group justified">
+    <a href="" class="btn btn-navbar">Add Member</a>
+    <a href="" class="btn btn-navbar">Delete Member</a>
+    <a href="" class="btn btn-navbar">Save</a>
+  </div>
+</div>
+
+<!-- App body content -->
+<div class="scrollable">
+
+  <div class="section section-wide scrollable-header">
+
+    <div class="row text-center">
+
+      <div class="col-xs-4">July 16, 2016</div>
+
+      <div class="col-xs-4">Paid</div>
+
+      <div class="col-xs-4">Details</div>
+
+    </div>
+
+  </div>
+
+  <!-- Dynamically generated content -->
+  <div class="scrollable-content">
+
+    <div class="list-group">
+
+      <div ng-repeat="item in scrollItems" class="list-group-item">
+
+        <div class="row text-justify">
+
+          <div class="col-xs-4">{{item}}</div>
+
+          <div class="checkbox col-xs-4 text-center" style="padding-left: 45px;">
+            <input type="checkbox" value="">
+          </div>
+
+          <div class="col-xs-4 text-center">
+            <a href="" class="btn btn-navbar">
+              <i class="fa fa-bars" style="padding-left: 40px;"></i>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

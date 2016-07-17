@@ -1,0 +1,25 @@
+{
+  "name": "mobile-angular-scratch",
+  "authors": [
+    "vuvuzella <j.tabacii@gmail.com>"
+  ],
+  "description": "a sample mobile angular ui project",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "mobile-angular-ui": "^1.2.1",
+    "angular": "1.5.x",
+    "angular-mocks": "1.5.x",
+    "bootstrap": "3.3.x",
+    "font-awesome": "4.2",
+    "angular-route": "1.5.x"
+  }
+}
