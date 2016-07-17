@@ -1,0 +1,6 @@
+{
+  'name'          :   'SAG1 Application Prototype',
+  'description'   :   'A simple bayad taker for sag1 team haha',
+  'repository'    :   'https://github.com/vuvuzella/sag1App',
+  'keywords'      :   ['sag1', 'mobile angular ui']
+}
