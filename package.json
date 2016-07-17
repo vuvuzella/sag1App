@@ -4,6 +4,7 @@
   "description": "a sample mobile angular ui project",
   "main": "index.js",
   "scripts": {
+    "postinstall" : "./node_modules/bower/bin/bower install"
     "start" : "node server.js",
     "local": "http-server -a localhost -p 8000 -c-1 ./",
     "test": "echo \"Error: no test specified\" && exit 1"
