@@ -13,28 +13,38 @@
           Home 
           <i class="fa fa-chevron-right pull-right"></i></a>
       </section>
+
+      <a class="list-group-item"
+        ng-model="members"
+        ng-click="members=!members"
+        ui-turn-off="uiSidebarLeft"
+        href="">Members
+          <i class="fa fa-chevron-right pull-right"></i></a>
+      </a>
+
       <section>
-        <a class="list-group-item" ng-model="collapsed"
-          ng-click="collapsed=!collapsed">Training
-          <i class="fa fa-plus-square pull-right"></i>
+        <a class="list-group-item" ng-model="training"
+          ng-click="training=!training">Training
+          <i ng-class="{'fa fa-plus-square pull-right' : !training, 
+            'fa fa-minus-square pull-right': training}"></i>
         </a>
         <a class="list-group-item"
-          ng-show="collapsed"
-          ng-click="collapsed=!collapsed"
+          ng-show="training"
+          ng-click="training=!training"
           ui-turn-off="uiSidebarLeft"
           href="#/training" style="padding-left: 30px;">New Training
           <i class="fa fa-chevron-right pull-right"></i>
         </a>
         <a class="list-group-item"
-          ng-show="collapsed"
-          ng-click="collapsed=!collapsed"
+          ng-show="training"
+          ng-click="training=!training"
           ui-turn-off="uiSidebarLeft"
           href="" style="padding-left: 30px;">Edit Training
           <i class="fa fa-chevron-right pull-right"></i>
         </a>
         <a class="list-group-item"
-          ng-show="collapsed"
-          ng-click="collapsed=!collapsed"
+          ng-show="training"
+          ng-click="training=!training"
           ui-turn-off="uiSidebarLeft"
           href="" style="padding-left: 30px;">Delete Training
           <i class="fa fa-chevron-right pull-right"></i>
