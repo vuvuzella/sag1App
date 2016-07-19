@@ -20,13 +20,23 @@ sag1Application.config(function($routeProvider) {
     templateUrl:      'training.html',
     reloadOnSearch:   false
   });
+
+  $routeProvider.when('/members', {
+    templateUrl:      'members.html',
+    reloadOnSearch:   false
+  });
 });
 
 sag1Application.controller('MainController', function($rootScope, $scope) {
   var items = [];
+  var due;
 
   for(var count = 0; count < 100; count++) {
-    items.push('Mr. Member ' + count);
+    due = count % 2? '1000': 'none';
+    items.push({
+      name: 'Mr. Member ' + count,
+      due: due
+    });
   }
   
   $scope.scrollItems = items;

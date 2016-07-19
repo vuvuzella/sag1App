@@ -1,0 +1,32 @@
+<!-- navbar title change -->
+<div ui-content-for="title">
+  <span>Members</span>
+</div>
+
+<!-- bottom navbar buttons -->
+<div ui-content-for="navbar-bottom">
+  <div class="btn-group justified">
+    <a href="" class="btn btn-navbar">Add Member</a>
+    <a href="" class="btn btn-navbar">Delete Member</a>
+  </div>
+</div>
+
+<!-- Body content -->
+<div class="scrollable" ui-state="searchBar">
+  <input 
+    type="search"
+    class="form-control scrollable-header"
+    placeholder="Search..."
+    ng-model="searchQuery">
+  </input>
+  <div class="scrollable-content">
+    <div class="list-group">
+      <div class="list-group-item"
+        ng-repeat="item in scrollItems | filter:searchQuery">
+        <div class=row>
+          {{item.name}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
