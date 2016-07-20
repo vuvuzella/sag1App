@@ -66,9 +66,12 @@
 
     <!-- body -->
     <div class="app-body" ng-class="{loading:loading}">
-      <div ng-show="loading" class="app-content-spinner">
+
+      <!-- Loading spinner icon -->
+      <div ng-show="loading" class="app-content-loading">
         <i class="fa fa-spinner fa-spin loading-spinner"></i>
       </div>
+
       <div class="app-content">
         <ng-view></ng-view>
       </div>
