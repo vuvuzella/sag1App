@@ -21,10 +21,21 @@
   </input>
   <div class="scrollable-content">
     <div class="list-group">
+      <!-- Hard Coded data -->
+      <!--
       <div class="list-group-item"
         ng-repeat="item in scrollItems | filter:searchQuery">
         <div class=row>
           {{item.name}}
+        </div>
+      </div>
+      -->
+      <!-- Data from fire base -->
+      <div class="list-group-item"
+        ng-model="members"
+        ng-repeat="member in members | filter:searchQuery"
+        <div class="row">
+          {{member.fName}}
         </div>
       </div>
     </div>
