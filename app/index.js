@@ -38,7 +38,8 @@ sag1Application.controller('MainController',
  *
  * Member Document object:
  * {
- *  fName           : firstName.
+ *  id              : uniqueID,
+ *  fName           : firstName,
  *  lName           : lastName,
  *  position        : bowOrStroke,
  *  memberSince     : dateOfMembership,

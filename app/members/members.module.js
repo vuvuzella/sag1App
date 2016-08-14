@@ -24,8 +24,10 @@ angular.module('sag1Application.members',
       // data.$bindTo($scope, "members");
   
       // Code below works on Firebase 2.4.2 and angularFire 1.2.0
-      var dataArrUrl = "https://sag1application-fe490.firebaseio.com/members/";
-      var dataArrRef = new Firebase(dataArrUrl);
-      var dataArr = $firebaseArray(dataArrRef);
-      $scope.members = dataArr;
+      // var dataArrUrl = "https://sag1application-fe490.firebaseio.com/members/";
+      // var dataArrRef = new Firebase(dataArrUrl);
+      // var dataArr = $firebaseArray(dataArrRef);
+      // $scope.members = dataArr;
+
+      // Use storage.service
 }]);
