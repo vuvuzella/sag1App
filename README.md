@@ -1,7 +1,5 @@
 ## SAG-1 App Prototype
 
-===================================
-
 ### Used:
 
 - AngularJS
