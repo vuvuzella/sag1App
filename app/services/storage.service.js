@@ -6,10 +6,11 @@ sag1Application.factory('localStorage', [
       var store = {};
       var storage = $window.localStorage || store;
 
-      // beforeEach function for mocking and testing
+      // put data in store without using setItem function
+      // to bootstrap testing
       var setStore = function(myStore) {
         storage = myStore || store;
-      }
+      };
 
       var addMember = function(member) {
         var retVal = false;
@@ -27,13 +28,8 @@ sag1Application.factory('localStorage', [
         if(storage.getItem) {
           return storage.getItem(elementId);
         } else {
-          var retVal = null
-          for (var i = 0; i < storage.length; i++) {
-            if (storage[i].id === elementId) {
-              retVal = storage[i]
-            }
-          }
-          return retVal;
+          // for mock
+          return storage[elementId];
         }
       };
 
