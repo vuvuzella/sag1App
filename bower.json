@@ -21,6 +21,7 @@
     "font-awesome": "4.2",
     "mobile-angular-ui": "^1.2.1",
     "angular-route": "1.5.x",
-    "angularfire": "^2.0.1"
+    "angularfire": "^2.0.1",
+    "js-xlsx": "^0.8.0"
   }
 }

@@ -8,8 +8,45 @@
   <div class="btn-group justified">
     <a href="" class="btn btn-navbar">Add Member</a>
     <a href="" class="btn btn-navbar">Delete Member</a>
+    <!--
+    <a href="" class="btn btn-navbar" ui-turn-on="modal1">Load Member Record</a>
+    -->
+    <label href="" class="btn btn-navbar btn-file">
+      Load Member Record
+      <input type="file"
+             style="display : none;"
+             onchange="angular.element(this).scope().fileNameChanged(this)">
+    </label>
   </div>
 </div>
+
+
+<!-- Load Member Record Modal View -->
+<!--
+<div ui-content-for="modals">
+  <div class="modal" ui-if="modal1" ui-state="modal1">
+    <div class="modal-backdrop in"></div>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" ui-turn-off="modal1">&times;</button>
+          <h4 class="modal-title">Load Member Record</h4>
+        </div>
+        <div class="modal-body">
+
+        </div>
+        <div class="modal-footer">
+          <button type="submit"
+                  class="btn btn-md btn-primary"
+                  ui-turn-off="modal1">
+            Load
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+-->
 
 <!-- Body content -->
 <div class="scrollable" ui-state="searchBar">
@@ -21,21 +58,13 @@
   </input>
   <div class="scrollable-content">
     <div class="list-group">
-      <!-- Hard Coded data -->
-      <!--
-      <div class="list-group-item"
-        ng-repeat="item in scrollItems | filter:searchQuery">
-        <div class=row>
-          {{item.name}}
-        </div>
-      </div>
-      -->
-      <!-- Data from fire base -->
+      <!-- Data from member.service -->
       <div class="list-group-item"
         ng-model="members"
-        ng-repeat="member in members | filter:searchQuery"
+        ng-repeat="member in members | filter:searchQuery">
         <div class="row">
-          {{member.fName}}
+          {{member.firstName}}
+          {{member.lastName}}
         </div>
       </div>
     </div>
